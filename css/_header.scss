@@ -1,0 +1,58 @@
+.header {
+    background-color:#232526;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    gap: 294px;
+    align-items: center;
+   
+    // padding: 20px 78px 20p x 60px;
+    // border: 1px red solid ;
+
+    &__left-part {
+        display: flex;
+        gap: 30px;
+        margin-left: 60px;
+
+
+        &__program {}
+
+        &__funding {}
+    }
+
+    &__logo {
+        width: 138px;
+        height: 40px;
+    }
+
+    &__right-part {
+        display: flex;
+        gap: 30px;
+        margin-right: 78px;
+
+        &__jobs {}
+
+        &__menu {}
+    }
+}
+
+.container {}
+
+.menu-drop {
+    position: relative;
+    
+    &__title {}
+    
+    &__item {}
+}
+.menu-drop::after{
+    position: absolute;
+    content: url('../img/menu-logo.png');
+    right: -17px;
+    top: 2px;
+}
+
+.head-text{
+    @include ginra(400,16);
+    text-transform: uppercase;
+}

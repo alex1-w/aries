@@ -1,0 +1,20 @@
+@import '_Zero_style.scss';
+@import '../fonts/fonts';
+@import '_header.scss';
+@import '_page-1.scss';
+
+.container {
+    width: 1160px;
+    margin: 0 auto;
+}
+
+body {
+    background: #1d1d1d;
+}
+
+.promo-text {
+    @include ginra(700, 82);
+    color: #F4F4F4;
+
+    &__span {
+}}

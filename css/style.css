@@ -1,0 +1,316 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+::-webkit-details-marker {
+  display: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 1 auto;
+}
+
+details summary {
+  display: block;
+}
+
+details summary::webkit-details-marker {
+  display: none;
+}
+
+@font-face {
+  font-family: Ginra;
+  font-display: swap;
+  src: url("../fonts/Ginra-Sans-Bold.woff2") format("woff2"), url("../fonts/Ginra-Sans-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Ginra;
+  font-display: swap;
+  src: url("../fonts/Ginra-Sans-Regular.woff2") format("woff2"), url("../fonts/Ginra-Sans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+.header {
+  background-color: #232526;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  gap: 294px;
+  align-items: center;
+}
+.header__left-part {
+  display: flex;
+  gap: 30px;
+  margin-left: 60px;
+}
+.header__logo {
+  width: 138px;
+  height: 40px;
+}
+.header__right-part {
+  display: flex;
+  gap: 30px;
+  margin-right: 78px;
+}
+.menu-drop {
+  position: relative;
+}
+.menu-drop::after {
+  position: absolute;
+  content: url("../img/menu-logo.png");
+  right: -17px;
+  top: 2px;
+}
+
+.head-text {
+  font-family: Ginra, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.promo-text {
+  font-family: Ginra, sans-serif;
+  font-weight: 700;
+  font-size: 82px;
+  color: #fff;
+  color: #F4F4F4;
+  line-height: 92px;
+}
+.promo-text__span {
+  background: linear-gradient(19deg, #8093FF 11%, #66FFE5 106%);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.spiral {
+  margin-top: -25%;
+  position: relative;
+  height: 800px;
+  width: 1955px;
+}
+
+.spiral img {
+  position: absolute;
+  top: 91%;
+  left: 30%;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.promo {
+  margin: 171px auto;
+  max-width: 838px;
+  min-height: 288px;
+  z-index: 2;
+  position: relative;
+  text-align: center;
+}
+
+.promo-arrow {
+  margin: 0 auto;
+  margin-top: 164px;
+  margin-bottom: 230px;
+  width: 1px;
+}
+
+.article-wrapper {
+  max-width: 1160px;
+  min-height: 691px;
+  position: relative;
+  background: url("../img/big-centered image.png") no-repeat;
+  background-position: right 35% top 15%;
+}
+
+.first-article {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-start;
+}
+.first-article__text {
+  max-width: 522px;
+  max-height: 380px;
+}
+.first-article__text__title {
+  font-family: Ginra, sans-serif;
+  font-weight: 400;
+  font-size: 62px;
+  color: #fff;
+  color: #F4F4F4;
+  line-height: 74px;
+}
+.first-article__text__text-content {
+  font-family: Ginra, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+  color: #B8B8B8;
+  line-height: 24px;
+  margin: 60px auto;
+}
+
+.link {
+  font-family: Ginra, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #fff;
+  color: #99A9FF;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.link::after {
+  content: url("../img/Arrow-right.png");
+  position: absolute;
+  top: 0;
+  right: -35px;
+}
+
+.img {
+  position: relative;
+}
+.img__front {
+  position: absolute;
+  bottom: 230px;
+  left: 860px;
+}
+.second-article {
+  margin-top: 200px;
+}
+.second-article__wrapper {
+  height: 153px;
+  display: flex;
+  flex-direction: row;
+  gap: 54px;
+}
+.second-article__wrapper__title {
+  font-family: Ginra, sans-serif;
+  font-weight: 400;
+  font-size: 62px;
+  color: #fff;
+}
+.second-article__wrapper__text-content {
+  font-family: Ginra, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+  line-height: 24px;
+  color: #B8B8B8;
+}
+
+.container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+body {
+  background: #1d1d1d;
+}
+
+.promo-text {
+  font-family: Ginra, sans-serif;
+  font-weight: 700;
+  font-size: 82px;
+  color: #fff;
+  color: #F4F4F4;
+}/*# sourceMappingURL=style.css.map */
