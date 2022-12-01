@@ -80,10 +80,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 
-::-webkit-details-marker {
-  display: none;
-}
-
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   /* display: none; <- Crashes Chrome on hover */
@@ -105,10 +101,6 @@ details summary {
   display: block;
 }
 
-details summary::webkit-details-marker {
-  display: none;
-}
-
 @font-face {
   font-family: Ginra;
   font-display: swap;
@@ -122,6 +114,36 @@ details summary::webkit-details-marker {
   src: url("../fonts/Ginra-Sans-Regular.woff2") format("woff2"), url("../fonts/Ginra-Sans-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
+}
+@font-face {
+  font-family: gilroy-bold;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Gilroy-Bold"), url(https://fonts.cdnfonts.com/s/16219/Gilroy-Bold.woff) format("woff");
+}
+@font-face {
+  font-family: gilroy-heavy;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Gilroy-Heavy"), url(https://fonts.cdnfonts.com/s/16219/Gilroy-Heavy.woff) format("woff");
+}
+@font-face {
+  font-family: gilroy-light;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Gilroy-Light"), url(https://fonts.cdnfonts.com/s/16219/Gilroy-Light.woff) format("woff");
+}
+@font-face {
+  font-family: gilroy-medium;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Gilroy-Medium"), url(https://fonts.cdnfonts.com/s/16219/Gilroy-Medium.woff) format("woff");
+}
+@font-face {
+  font-family: gilroy-regular;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Gilroy-Regular"), url(https://fonts.cdnfonts.com/s/16219/Gilroy-Regular.woff) format("woff");
 }
 .header {
   background-color: #232526;
@@ -180,6 +202,7 @@ details summary::webkit-details-marker {
 }
 
 .spiral {
+  display: none;
   margin-top: -25%;
   position: relative;
   height: 800px;
@@ -213,7 +236,7 @@ details summary::webkit-details-marker {
   width: 1px;
 }
 
-.article-wrapper {
+.first-article {
   max-width: 1160px;
   min-height: 691px;
   position: relative;
@@ -221,17 +244,17 @@ details summary::webkit-details-marker {
   background-position: right 35% top 15%;
 }
 
-.first-article {
+.article-wrapper {
   position: absolute;
   bottom: 0;
   display: flex;
   justify-content: flex-start;
 }
-.first-article__text {
+.article-wrapper__text {
   max-width: 522px;
   max-height: 380px;
 }
-.first-article__text__title {
+.article-wrapper__text__title {
   font-family: Ginra, sans-serif;
   font-weight: 400;
   font-size: 62px;
@@ -239,13 +262,13 @@ details summary::webkit-details-marker {
   color: #F4F4F4;
   line-height: 74px;
 }
-.first-article__text__text-content {
-  font-family: Ginra, sans-serif;
+.article-wrapper__text__text-content {
+  font-family: "Gilroy-Regular", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 16;
+  line-height: 24px;
   color: #fff;
   color: #B8B8B8;
-  line-height: 24px;
   margin: 60px auto;
 }
 
@@ -274,28 +297,63 @@ details summary::webkit-details-marker {
   bottom: 230px;
   left: 860px;
 }
-.second-article {
-  margin-top: 200px;
-}
 .second-article__wrapper {
+  margin-top: 200px;
   height: 153px;
   display: flex;
   flex-direction: row;
-  gap: 54px;
+  justify-content: space-between;
+  align-items: center;
 }
 .second-article__wrapper__title {
   font-family: Ginra, sans-serif;
   font-weight: 400;
   font-size: 62px;
   color: #fff;
+  line-height: 119%;
+  width: 664px;
+  text-transform: capitalize;
 }
 .second-article__wrapper__text-content {
-  font-family: Ginra, sans-serif;
+  font-family: "Gilroy-Regular", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 16;
+  line-height: 150%;
   color: #fff;
-  line-height: 24px;
   color: #B8B8B8;
+  width: 442px;
+}
+
+.common-article {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+}
+.common-article__first {
+  flex-direction: row;
+}
+.common-article__second {
+  flex-direction: row-reverse;
+}
+.common-article__images {
+  position: relative;
+  height: 480px;
+}
+.common-article__image-back {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+.common-article__image-front {
+  position: absolute;
+  top: 38px;
+  left: 270px;
+  z-index: 2;
+}
+.common-article__info {
+  width: 507px;
 }
 
 .container {

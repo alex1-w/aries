@@ -13,6 +13,7 @@
 }
 
 .spiral {
+    display: none;
     margin-top: -25%;
     position: relative;
     height: 800px;
@@ -63,7 +64,7 @@
 //     opacity: 0.8;
 // }
 
-.article-wrapper {
+.first-article {
     max-width: 1160px;
     min-height: 691px;
     position: relative;
@@ -72,7 +73,7 @@
     background-position: right 35% top 15%;
 }
 
-.first-article {
+.article-wrapper {
     position: absolute;
     bottom: 0;
     display: flex;
@@ -91,9 +92,8 @@
         }
 
         &__text-content {
-            @include ginra(400, 16);
+            @include gilroy(400, 16, 24px);
             color: #B8B8B8;
-            line-height: 24px;
             // display: flex;
             // align-items: center;
             margin: 60px auto;
@@ -137,23 +137,84 @@
 }
 
 .second-article {
-    margin-top: 200px;
 
     &__wrapper {
+        margin-top: 200px;
         height: 153px;
         display: flex;
         flex-direction: row;
-        // justify-content: space-between;
-        gap: 54px;
+        justify-content: space-between;
+        align-items: center;
+        // gap: 54px;
 
         &__title {
             @include ginra(400, 62);
+            line-height: 119%;
+            width: 664px;
+            text-transform: capitalize;
         }
 
         &__text-content {
-            @include ginra(400, 16);
-            line-height: 24px;
+            @include gilroy(400, 16, 150%);
             color: #B8B8B8;
+            width: 442px;
         }
     }
 }
+
+.common-article {
+    display: flex;
+    justify-content: space-between;
+    // height: 480px;
+    height: 100%;
+    align-items: center;
+
+    &__first {
+        flex-direction: row;
+    }
+
+    &__second {
+        flex-direction: row-reverse;
+
+    }
+
+    &__images {
+        position: relative;
+        height: 480px;
+    }
+
+    &__image-back {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+    }
+
+    &__image-front {
+        position: absolute;
+        top: 38px;
+        left: 270px;
+        z-index: 2;
+    }
+
+
+    &__info {
+
+        width: 507px;
+    }
+}
+
+.info-article {
+
+    
+
+    &__name {}
+
+    &__title {}
+
+    &__text {}
+
+    &__link {}
+}
+
+.link {}

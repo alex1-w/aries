@@ -71,9 +71,7 @@ h1,h2,h3,h4,h5,h6 {
   font-size: inherit;
   font-weight: 400;
 }
-::-webkit-details-marker {
-  display: none;
-}
+
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -94,6 +92,6 @@ main {
 details summary {
   display: block;
 }
-details summary::webkit-details-marker {
-  display: none;
-}
+// summary::webkit-details-marker {
+//   display: none;
+// }
