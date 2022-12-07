@@ -1,0 +1,4 @@
+*.zip
+demo.html
+
+/node_modules/

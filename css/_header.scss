@@ -56,3 +56,21 @@
     @include ginra(400,16);
     text-transform: uppercase;
 }
+
+.header-mobile{
+    background-color: #fff;
+    height: 90px;
+    width: 100vw;
+}
+
+@media screen and (min-width: 400px) {
+    .header-mobile{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .header-screen{
+        display: none;
+    }
+}

@@ -60,13 +60,14 @@
     font-family: Ginra, sans-serif;
     font-weight: $fw;
     font-size: $fz+px;
-    color: #fff;
+    color: #F4F4F4;
+    ;
 }
 
 @mixin gilroy($fw, $fz, $lh) {
     font-family: 'Gilroy-Regular', sans-serif;
     font-weight: $fw;
-    font-size: $fz  ;
+    font-size: $fz ;
     line-height: $lh;
-    color: #fff;
+    color: #F4F4F4;
 }

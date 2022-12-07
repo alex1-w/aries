@@ -9,12 +9,19 @@
 }
 
 body {
-    background: #1d1d1d;
+    background: rgb(29, 29, 29);
 }
 
 .promo-text {
     @include ginra(700, 82);
     color: #F4F4F4;
 
-    &__span {
-}}
+    &__span {}
+}
+
+@media screen and (max-width: 400px) {
+    .container {
+        width: 400px;
+    }
+
+}
