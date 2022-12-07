@@ -1,0 +1,73 @@
+@font-face {
+    font-family: Ginra;
+    font-display: swap;
+    src: url("../fonts/Ginra-Sans-Bold.woff2") format("woff2"), url("../fonts/Ginra-Sans-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Ginra;
+    font-display: swap;
+    src: url("../fonts/Ginra-Sans-Regular.woff2") format("woff2"), url("../fonts/Ginra-Sans-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: gilroy-bold;
+    font-style: normal;
+    font-weight: 400;
+    src: local('Gilroy-Bold'), url(https://fonts.cdnfonts.com/s/16219/Gilroy-Bold.woff) format('woff')
+}
+
+@font-face {
+    font-family: gilroy-heavy;
+    font-style: normal;
+    font-weight: 400;
+    src: local('Gilroy-Heavy'), url(https://fonts.cdnfonts.com/s/16219/Gilroy-Heavy.woff) format('woff')
+}
+
+@font-face {
+    font-family: gilroy-light;
+    font-style: normal;
+    font-weight: 400;
+    src: local('Gilroy-Light'), url(https://fonts.cdnfonts.com/s/16219/Gilroy-Light.woff) format('woff')
+}
+
+@font-face {
+    font-family: gilroy-medium;
+    font-style: normal;
+    font-weight: 400;
+    src: local('Gilroy-Medium'), url(https://fonts.cdnfonts.com/s/16219/Gilroy-Medium.woff) format('woff')
+}
+
+@font-face {
+    font-family: gilroy-regular;
+    font-style: normal;
+    font-weight: 400;
+    src: local('Gilroy-Regular'), url(https://fonts.cdnfonts.com/s/16219/Gilroy-Regular.woff) format('woff')
+}
+
+// font-family: 'Gilroy-Bold', sans-serif;
+// font-family: 'Gilroy-Heavy', sans-serif;
+// font-family: 'Gilroy-Light', sans-serif;
+// font-family: 'Gilroy-Medium', sans-serif;
+// font-family: 'Gilroy-Regular', sans-serif;
+
+
+@mixin ginra($fw, $fz) {
+    font-family: Ginra, sans-serif;
+    font-weight: $fw;
+    font-size: $fz+px;
+    color: #F4F4F4;
+    ;
+}
+
+@mixin gilroy($fw, $fz, $lh) {
+    font-family: 'Gilroy-Regular', sans-serif;
+    font-weight: $fw;
+    font-size: $fz ;
+    line-height: $lh;
+    color: #F4F4F4;
+}

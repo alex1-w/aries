@@ -1,0 +1,840 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 1 auto;
+}
+
+details summary {
+  display: block;
+}
+
+@font-face {
+  font-family: Ginra;
+  font-display: swap;
+  src: url("../fonts/Ginra-Sans-Bold.woff2") format("woff2"), url("../fonts/Ginra-Sans-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Ginra;
+  font-display: swap;
+  src: url("../fonts/Ginra-Sans-Regular.woff2") format("woff2"), url("../fonts/Ginra-Sans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: gilroy-bold;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Gilroy-Bold"), url(https://fonts.cdnfonts.com/s/16219/Gilroy-Bold.woff) format("woff");
+}
+@font-face {
+  font-family: gilroy-heavy;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Gilroy-Heavy"), url(https://fonts.cdnfonts.com/s/16219/Gilroy-Heavy.woff) format("woff");
+}
+@font-face {
+  font-family: gilroy-light;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Gilroy-Light"), url(https://fonts.cdnfonts.com/s/16219/Gilroy-Light.woff) format("woff");
+}
+@font-face {
+  font-family: gilroy-medium;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Gilroy-Medium"), url(https://fonts.cdnfonts.com/s/16219/Gilroy-Medium.woff) format("woff");
+}
+@font-face {
+  font-family: gilroy-regular;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Gilroy-Regular"), url(https://fonts.cdnfonts.com/s/16219/Gilroy-Regular.woff) format("woff");
+}
+.header {
+  background-color: #232526;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  gap: 294px;
+  align-items: center;
+}
+.header__left-part {
+  display: flex;
+  gap: 30px;
+  margin-left: 60px;
+}
+.header__logo {
+  width: 138px;
+  height: 40px;
+}
+.header__right-part {
+  display: flex;
+  gap: 30px;
+  margin-right: 78px;
+}
+.menu-drop {
+  position: relative;
+}
+.menu-drop::after {
+  position: absolute;
+  content: url("../img/menu-logo.png");
+  right: -17px;
+  top: 2px;
+}
+
+.head-text {
+  font-family: Ginra, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #F4F4F4;
+  text-transform: uppercase;
+}
+
+.header-mobile {
+  background-color: #fff;
+  height: 90px;
+  width: 100vw;
+}
+
+@media screen and (min-width: 400px) {
+  .header-mobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 400px) {
+  .header-screen {
+    display: none;
+  }
+}
+.promo-text {
+  font-family: Ginra, sans-serif;
+  font-weight: 700;
+  font-size: 82px;
+  color: #F4F4F4;
+  color: #f4f4f4;
+  line-height: 92px;
+}
+.promo-text__span {
+  background: linear-gradient(19deg, #8093ff 11%, #66ffe5 106%);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.spiral {
+  display: none;
+  margin-top: -25%;
+  position: relative;
+  height: 800px;
+  width: 1955px;
+}
+
+.spiral img {
+  position: absolute;
+  top: 91%;
+  left: 30%;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.promo {
+  margin: 171px auto;
+  max-width: 838px;
+  min-height: 288px;
+  z-index: 2;
+  position: relative;
+  text-align: center;
+}
+
+.promo-arrow {
+  margin: 0 auto;
+  margin-top: 164px;
+  margin-bottom: 230px;
+  width: 1px;
+}
+
+.first-article {
+  max-width: 1160px;
+  min-height: 691px;
+  position: relative;
+  background: url("../img/big-centered image.png") no-repeat;
+  background-position: right 35% top 15%;
+}
+
+.article-wrapper {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-start;
+}
+.article-wrapper__text {
+  max-width: 522px;
+  max-height: 380px;
+}
+.article-wrapper__text__title {
+  font-family: Ginra, sans-serif;
+  font-weight: 400;
+  font-size: 62px;
+  color: #F4F4F4;
+  color: #f4f4f4;
+  line-height: 74px;
+}
+.article-wrapper__text__text-content {
+  font-family: "Gilroy-Regular", sans-serif;
+  font-weight: 400;
+  font-size: 16;
+  line-height: 24px;
+  color: #F4F4F4;
+  color: #b8b8b8;
+  margin: 60px auto;
+}
+
+.link {
+  font-family: Ginra, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #F4F4F4;
+  color: #99a9ff;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.link::after {
+  content: url("../img/Arrow-right.png");
+  position: absolute;
+  top: 0;
+  right: -35px;
+}
+
+.img {
+  position: relative;
+}
+.img__front {
+  position: absolute;
+  bottom: 230px;
+  left: 860px;
+}
+.second-article__wrapper {
+  margin-bottom: 80px;
+  margin-top: 200px;
+  height: 153px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.second-article__wrapper__title {
+  font-family: Ginra, sans-serif;
+  font-weight: 400;
+  font-size: 62px;
+  color: #F4F4F4;
+  line-height: 119%;
+  width: 664px;
+  text-transform: capitalize;
+}
+.second-article__wrapper__text-content {
+  font-family: "Gilroy-Regular", sans-serif;
+  font-weight: 400;
+  font-size: 16;
+  line-height: 150%;
+  color: #F4F4F4;
+  color: #b8b8b8;
+  width: 442px;
+}
+
+.common-article {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+}
+.common-article__first {
+  flex-direction: row;
+}
+.common-article__second {
+  margin-top: 60px;
+  flex-direction: row-reverse;
+}
+.common-article__images {
+  position: relative;
+  height: 480px;
+}
+.common-article__image-back {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+.common-article__image-front {
+  position: absolute;
+  top: 38px;
+  left: 270px;
+  z-index: 2;
+}
+.common-article__back-right {
+  position: absolute;
+  right: 270px;
+  bottom: 54px;
+  z-index: 2;
+}
+.common-article__front-right {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  z-index: 1;
+}
+.common-article__info {
+  width: 507px;
+}
+
+.info-article {
+  display: block;
+}
+.info-article__name {
+  font-family: Ginra, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #F4F4F4;
+  color: rgba(184, 184, 184, 0.7);
+  line-height: 18px;
+}
+.info-article__title {
+  font-family: Ginra, sans-serif;
+  font-weight: 400;
+  font-size: 44px;
+  color: #F4F4F4;
+  color: #f4f4f4;
+  line-height: 50px;
+}
+.info-article__text {
+  font-family: "Gilroy-Regular", sans-serif;
+  font-weight: 400;
+  font-size: 16;
+  line-height: 150%;
+  color: #F4F4F4;
+  color: #b8b8b8;
+  margin: 1.5% auto 5% auto;
+}
+.portfolio__header {
+  border-width: 2px;
+  border-style: solid;
+  -o-border-image: linear-gradient(90deg, rgb(29, 29, 29), rgb(128, 147, 255), rgb(96, 219, 212), rgb(125, 155, 250), rgb(29, 29, 29));
+     border-image: linear-gradient(90deg, rgb(29, 29, 29), rgb(128, 147, 255), rgb(96, 219, 212), rgb(125, 155, 250), rgb(29, 29, 29));
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+}
+.portfolio__header__title {
+  font-family: Ginra, sans-serif;
+  font-weight: 400;
+  font-size: 62px;
+  color: #F4F4F4;
+  line-height: 72px;
+}
+
+.gradient-line {
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(90deg, rgb(29, 29, 29), rgb(128, 147, 255), rgb(96, 219, 212), rgb(125, 155, 250), rgb(29, 29, 29));
+}
+.gradient-line__line1 {
+  margin-bottom: 30px;
+  margin-top: 200px;
+}
+.gradient-line__rotate {
+  background: linear-gradient(0deg, rgb(29, 29, 29), rgb(128, 147, 255), rgb(96, 219, 212), rgb(125, 155, 250), rgb(29, 29, 29));
+  height: 100%;
+  width: 2px;
+  margin: 0 64px;
+}
+
+.portofolio__portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 290px);
+  grid-template-rows: repeat(2, 178px);
+  justify-items: center;
+}
+
+.portfolio-grid__grid-item {
+  font-family: Ginra, sans-serif;
+  font-weight: 300;
+  font-size: 36px;
+  color: #F4F4F4;
+  line-height: 36px;
+  padding-bottom: 50vw;
+  padding: 70px;
+}
+.persons {
+  width: 1300px;
+  height: 992px;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+.persons__img-cards {
+  max-width: 566px;
+  display: grid;
+  grid-template: 1fr/repeat(2, minmax(150px, 270px));
+  grid-auto-rows: 425px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  row-gap: 60px;
+}
+.persons__img-cards__left-part-imgs {
+  margin-top: 90px;
+  grid-area: col1;
+}
+.persons__img-cards__right-part-imgs {
+  grid-area: col2;
+}
+.persons .person:nth-child(odd) {
+  margin-top: 90px;
+}
+.persons__info-wrapper {
+  padding: 173px 164px 278px 69px;
+  background-color: #232526;
+  max-height: 713px;
+  max-width: 606px;
+}
+.card-content {
+  max-width: 373px;
+  max-height: 262px;
+}
+.card-content__title {
+  font-family: Ginra, sans-serif;
+  font-weight: 400;
+  font-size: 62px;
+  color: #F4F4F4;
+  line-height: 74px;
+}
+.card-content__text {
+  font-family: "Gilroy-Regular", sans-serif;
+  font-weight: 400;
+  font-size: 16;
+  line-height: 24px;
+  color: #F4F4F4;
+  color: #B8B8B8;
+  margin: 20px auto 26px auto;
+}
+
+.latest-portfolio {
+  display: grid;
+  grid-template-columns: 763px 397px;
+  grid-template-rows: 247px 733px;
+  grid-template-areas: "A A" "B C";
+  max-width: 1160px;
+}
+.latest-portfolio__cards {
+  margin-left: 30px;
+}
+.latest-portfolio__header {
+  grid-area: A;
+}
+.latest-portfolio__header__content {
+  font-family: Ginra, sans-serif;
+  font-weight: 400;
+  font-size: 62px;
+  color: #F4F4F4;
+  line-height: 74px;
+  text-transform: capitalize;
+}
+
+.item-cards {
+  display: flex;
+  flex-direction: column;
+  grid-area: B;
+}
+.item-cards__name {
+  font-family: Ginra, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #F4F4F4;
+  line-height: 18px;
+  letter-spacing: 30%;
+  color: rgba(184, 184, 184, 0.7);
+  text-transform: uppercase;
+}
+.item-cards__content {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  font-family: Ginra, sans-serif;
+  font-weight: 400;
+  font-size: 44px;
+  color: #F4F4F4;
+  line-height: 50px;
+  display: block;
+  max-width: 499px;
+  text-transform: capitalize;
+}
+.item-cards__mail {
+  font-family: "Gilroy-Regular", sans-serif;
+  font-weight: 400;
+  font-size: 16;
+  line-height: 16px;
+  color: #F4F4F4;
+  color: #B8B8B8;
+  text-transform: capitalize;
+}
+
+.latest-portfolio__job {
+  grid-area: C;
+}
+.latest-portfolio__job__head {
+  margin-bottom: 30px;
+}
+.latest-portfolio .nav-categories__block__item {
+  margin-bottom: 20px;
+  font-family: Ginra, sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  color: #F4F4F4;
+  line-height: 26px;
+  color: #B8B8B8;
+  text-transform: capitalize;
+  position: relative;
+}
+.latest-portfolio .nav-categories__block__item::after {
+  content: url("../img/Arrow-right.png");
+  width: 30px;
+  position: absolute;
+  top: 0;
+  right: -25px;
+}
+
+.head__content {
+  font-family: Ginra, sans-serif;
+  font-weight: 600;
+  font-size: 26px;
+  color: #F4F4F4;
+  line-height: 38px;
+  text-transform: capitalize;
+}
+
+.slider {
+  margin-bottom: 10vw;
+}
+.slider__head__content {
+  font-family: Ginra, sans-serif;
+  font-weight: 400;
+  font-size: 62px;
+  color: #F4F4F4;
+  line-height: 50px;
+  text-transform: capitalize;
+}
+
+.footer__wrapper {
+  display: grid;
+  grid-template-columns: 610px 466px;
+  grid-template-rows: 148px 194px 111px;
+  grid-template-areas: "TITLE  INPUT" "TITLE-TEXT INPUT" "NAVIGATION POLICY";
+}
+.footer__wrapper__title {
+  grid-area: TITLE;
+}
+.footer__wrapper__text {
+  grid-area: TITLE-TEXT;
+  font-family: "Gilroy-Regular", sans-serif;
+  font-weight: 400;
+  font-size: 16;
+  line-height: 24px;
+  color: #F4F4F4;
+  max-width: 518px;
+  color: #B8B8B8;
+  margin-top: 40px;
+}
+.footer__wrapper__navigation {
+  grid-area: NAVIGATION;
+}
+.footer__wrapper__inputs {
+  grid-area: INPUT;
+}
+.footer__wrapper__policy {
+  grid-area: POLICY;
+}
+
+.title {
+  max-width: 565px;
+}
+.title__content {
+  font-family: Ginra, sans-serif;
+  font-weight: 400;
+  font-size: 62px;
+  color: #F4F4F4;
+  line-height: 74px;
+  text-transform: capitalize;
+  background: linear-gradient(45deg, #8093FF, #66FFE5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navigation-links {
+  max-width: 485px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.navigation-links__item {
+  font-family: Ginra, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #F4F4F4;
+  line-height: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: #B8B8B8;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 36px;
+  padding-left: 70px;
+}
+.inputs__item {
+  background: #1d1d1d;
+  font-family: Ginra, sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  color: #F4F4F4;
+  line-height: 26px;
+}
+
+.policy {
+  font-family: Ginra, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #F4F4F4;
+  line-height: 18px;
+  color: #B8B8B8;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+.link__get-in-touch::after {
+  content: url("../img/Arrow-right.png");
+  position: absolute;
+  top: 0;
+  right: 242px;
+}
+
+input[type=range] {
+  width: 100%;
+  margin: 1.5px 0;
+  background-color: transparent;
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  background: #3071a9;
+  border: 0.5px solid #565656;
+  width: 100%;
+  height: 0px;
+  cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  margin-top: -2px;
+  width: 45px;
+  height: 3px;
+  background: linear-gradient(90deg, #99A9FF 0%, #5CE4CF 100%);
+  border-radius: 29px;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #367ebd;
+}
+
+input[type=range]::-moz-range-track {
+  background: #3071a9;
+  border: 0.5px solid #565656;
+  width: 100%;
+  height: 0px;
+  cursor: pointer;
+}
+
+input[type=range]::-moz-range-thumb {
+  width: 45px;
+  height: 3px;
+  background: linear-gradient(90deg, #99A9FF 0%, #5CE4CF 100%);
+  border-radius: 29px;
+  cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+  background: transparent;
+  border-color: transparent;
+  border-width: 2.5px 0;
+  color: transparent;
+  width: 100%;
+  height: 0px;
+  cursor: pointer;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: #2a6495;
+  border: 0.5px solid #565656;
+}
+
+input[type=range]::-ms-fill-upper {
+  background: #3071a9;
+  border: 0.5px solid #565656;
+}
+
+input[type=range]::-ms-thumb {
+  width: 45px;
+  height: 3px;
+  background: linear-gradient(90deg, #99A9FF 0%, #5CE4CF 100%);
+  border-radius: 29px;
+  cursor: pointer;
+  margin-top: 0px;
+  /*Needed to keep the Edge thumb centred*/
+}
+
+input[type=range]:focus::-ms-fill-lower {
+  background: #3071a9;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+  background: #367ebd;
+}
+
+/*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
+how to remove the virtical space around the range input in IE*/
+@supports (-ms-ime-align: auto) {
+  /* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
+  input[type=range] {
+    margin: 0;
+    /*Edge starts the margin from the thumb, not the track as other browsers do*/
+  }
+}
+.container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+body {
+  background: rgb(29, 29, 29);
+}
+
+.promo-text {
+  font-family: Ginra, sans-serif;
+  font-weight: 700;
+  font-size: 82px;
+  color: #F4F4F4;
+  color: #F4F4F4;
+}
+@media screen and (max-width: 400px) {
+  .container {
+    width: 400px;
+  }
+}/*# sourceMappingURL=style.css.map */

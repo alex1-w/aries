@@ -1,0 +1,25 @@
+.one {
+    width: 700px;
+    height: 500px;
+    background-color: #d42929;
+    margin: 0 auto;
+}
+
+.two{
+display: flex;
+width: 50%;
+height: 50%;
+background-color: rgb(21, 197, 21);
+align-items: center;
+justify-content: space-around;
+border: 10px blueviolet dashed;
+}
+.vel {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+}
+.spann {
+position: absolute;
+top: 6px;
+right: -54px;
+}
